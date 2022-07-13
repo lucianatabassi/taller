@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
   <title>Clarín</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!--LINK DE CSS DE CARRUSELES CHIQUITOS-->
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <!--LINK DE CSS DE CARRUSELES-->
@@ -183,6 +184,8 @@
       <h1 class="tituloS-secciones" id="titulo-politica">Política</h1>
     </div>
     
+    
+
     <div class="slide-container swiper" id="slide-padding">
       <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
@@ -202,19 +205,47 @@
                   
                   </div>
                   <div class="botones-card">
-                <button id="boton-card">
-                  <img src="img/Like.png" class="like" alt="">
-                  
+                <button id="boton-card" class="mg" onclick="abrirLike()">
+                    <span id="mg" class="like"></span>
+
                 </button>
+
+                
+
                 <button id="boton-card">
                   <img src="img/Share.png" class="share" alt="">
                   
                 </button>
-                <button id="boton-card">
+                <button id="boton-card" onclick="abrirPuntitos()">
                   <img src="img/Menu 16.png" class="puntos" alt="">
                 </button>
-              </div>
+              </div>     
+              
+              <div class="popup-puntitos" id="popup1">
+                <div class="overlay">
+                  <div class="contenido-popup-puntitos">
+                    <div class="popup-row1">
+                      <img src="img/disLike.png" alt="">
+                      <p class="popup-texto">No me gusta esta noticia</p>
+                    </div>
+                    
+                    <div class="popup-row2">
+                      <img src="img/Vector.png"  alt="">
+                      <p class="popup-texto">No me interesa Política </p>
+                    </div>
+                    
+                    <div class="popup-row3">
+                      <img src="img/intereses.png" alt="">
+                      <p class="popup-texto">Administrar los intereses</p>
+                    </div>
+                    
+                  </div>
                 </div>
+                
+              </div>
+
+                </div>
+                
             </div>
             <div class="card swiper-slide">
               <div class="imagen-content">
@@ -455,6 +486,16 @@
         <div class="swiper-pagination"></div>
 
     </div>  
+    <div></div>
+    
+    <div class="popup-like" id="popup2">
+      <div class="overlay2">
+        <img src="img/cosito del like.png" alt="">
+      </div>
+    </div>
+
+    
+
   </section>
 
   <div id="SECCION-TECNOLOGIA">
@@ -1426,6 +1467,13 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 
+  <script>
+    $(document).ready(function() {
+      $(".mg").click(function(){
+        $(".mg").toggleClass("mg-activado")
+      })
+    })
+  </script>
   
 </body>
 </html>

@@ -41,3 +41,12 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+
+function abrirPuntitos() {
+  document.getElementById("popup1").classList.toggle("popup-active")
+}
+
+function abrirLike() {
+  document.getElementById("popup2").classList.toggle("popup-like-active")
+}
