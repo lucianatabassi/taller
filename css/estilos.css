@@ -140,6 +140,61 @@ h1 {
     filter: brightness(.8);
    }
    
+   .chip {
+    display: inline-block;
+    position: relative;
+    top: 120px;
+    padding: 0 30px;
+    margin-right: 20px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 27px;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid;
+    border-color: #DE1B2F;
+    background-color: #f1f1f100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+  }
+  .chip p {
+    text-align: center;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .closebtn {
+    position: absolute;
+    top: 0px;
+    left: 74%;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+    float: right;
+    bottom: 100px;
+    font-size: 25px;
+    line-height: 25px;
+    cursor: pointer;
+  }
+  .mas {
+    position: relative;
+    top: 118px;
+  }
+  .closebtn:hover {
+    color: #DE1B2F;
+  }
+  .dropdown-container {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 23px;
+    overflow: hidden;
+    display: none;
+  }
+  .dropdown-active {
+    display: block;
+  }
+
   .img-menu {
     width: 40px;
     height: 40px;
@@ -262,7 +317,7 @@ h1 {
     /*position: absolute;*/
     top:1120px;
     margin: 0 0 25px 43px;
-    padding-right: 232px;
+    padding-right: 238px;
   }
 
   .lineas {
@@ -417,11 +472,9 @@ h1 {
     max-width: 1250px;
     width: 100%;
 
-    /*background-color: blueviolet;*/
     
   }
   .slide-container.swiper {
-   /* margin: 0;*/
     width: 100%;
     height: 700px;
     align-self: center;
@@ -429,7 +482,7 @@ h1 {
   }
 
   #slide-padding {
-    padding-left: 14px;
+    /*padding-left: 14px;*/
     padding-right: 14px;
   }
   .slide-content {
@@ -438,6 +491,9 @@ h1 {
   align-self: center;
   padding: 60px 0 0 0;
   height: 600px;
+  }
+  .swiper {
+    margin: 0;
   }
   .card {
     display: flex;
@@ -449,6 +505,9 @@ h1 {
   .card:hover {
     box-shadow: 5px 5px 10px rgba(10, 10, 10, 0.4);
     transform: translateY(-1%);
+  }
+  .card .swiper-slide .swiper-slide-active {
+    transition: all 400ms ease !important;
   }
  .card-wrapper.swiper-wrapper {
  height: auto;
@@ -483,8 +542,9 @@ h1 {
     font-family: 'Gelasio', serif;
     font-weight: 500;
     font-size: 2rem;
+    cursor: pointer;
   }
-  .titulos-card:hover {
+  .titulo-card:hover {
     text-decoration: underline;
   }
   .autor-card {
@@ -551,13 +611,19 @@ h1 {
   margin-right: 15px;
 }
 
-.mg {
+.mg,
+.mg2 {
   background-image: url("../img/Like.png");
   background-repeat: no-repeat;
   width: 30px;
   margin-right: 15px;
 }
 .mg:hover {
+  background-image: url("../img/Group\ 15.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mg2:hover {
   background-image: url("../img/Group\ 15.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -569,26 +635,30 @@ h1 {
 }
 .popup-like {
   position: relative;
-  bottom:27%;
-  left: 5%;
+  bottom:28%;
+  left: 6%;
+  width: 220px;
   display: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+
+.popup-like img {
+  width: 220px;
+  height: auto;
+  
+}
+.popup-like-active {
+  display: block;
   opacity: 1;
-  animation: fade 9s linear;
+  animation: fade 10s linear;
 }
 @keyframes fade {
   0%,100% { opacity: 0 }
   50% { opacity: 1 }
   
 }
-
-.popup-like img {
-  width: 220px;
-  height: auto;
-}
-.popup-like-active {
-  display: block;
   
-}
+
 
 
 .popup-puntitos {
@@ -631,7 +701,7 @@ h1 {
 .popup-row2 img,
 .popup-row3 img {
   width: 20px;
-  height: auto;
+  height: 20px;
   margin-right: 20px;
 
 }
@@ -639,6 +709,7 @@ h1 {
 .popup-texto {
   margin-bottom: 0;
 }
+
 .popup-puntitos .contenido-popup-puntitos {
   display: flex;
   flex-direction: column;
@@ -694,13 +765,20 @@ h1 {
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
   /*bottom: 660px !important;*/
-  top: 25px !important;
+  top: 30px !important;
   
 
 }
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  left: 93% !important;
+  left: 100% !important;
 
+}
+.swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontal {
+right: 100px;
+}
+.swiper-pagination {
+  text-align: unset !important;
+  left: 1140px !important;
 }
 /*.swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-bullets-dynamic {
   width: 100px !important;
@@ -858,14 +936,7 @@ h1 {
 .titulo-especiales:hover {
   text-decoration: underline;
 }
-.especiales-row2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 50px;
-
-
-}
+.especiales-row2,
 .especiales-row3 {
   display: flex;
   flex-direction: row;
@@ -873,6 +944,96 @@ h1 {
   margin-bottom: 50px;
 
 
+}
+
+
+.footer{
+  background-color: black;
+  margin-top: 125px;
+  padding: 103px 0;
+}
+
+.footer-col{
+   width: 50%;
+   margin: auto;
+}
+
+.contenedor-footer{
+  max-width: 1170px;
+	margin:auto;
+  margin-left: -80px;
+}
+
+.footer-row{
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col2{
+  margin-left: -700px;
+  margin-top: 55px;
+}
+
+.footer-col p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: white;
+  position: relative;
+}
+
+.footer-col2 p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: white;
+  position: relative;
+}
+
+.footer-col p::before{
+  content: '';
+	position: absolute;
+	left:0;
+	bottom: 50px;
+	background-color: #DE1B2F;
+	height: 3px;
+	box-sizing: border-box;
+	width: 140px;
+}
+
+
+.footer-col a{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-col2 a{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-col a:hover{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: #DE1B2F;
+}
+
+.footer-col2 a:hover{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: #DE1B2F;
+}
+
+.footer-col ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer-col2 ul{
+  list-style: none;
+  padding-left: 0px;
 }
 
   @media (min-width: 1600px) and (max-width: 1920px) {

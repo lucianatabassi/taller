@@ -22,7 +22,7 @@ var swiper = new Swiper(".slide-content", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-      dynamicBullets: true,
+      dynamicBullets: false,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -42,6 +42,8 @@ var swiper = new Swiper(".slide-content", {
     },
   });
 
+  
+
 
 function abrirPuntitos() {
   document.getElementById("popup1").classList.toggle("popup-active")
@@ -49,4 +51,11 @@ function abrirPuntitos() {
 
 function abrirLike() {
   document.getElementById("popup2").classList.toggle("popup-like-active")
+  setTimeout(() => document.getElementById("popup2").style.display="none", 10000);
+}
+
+
+function abrirFiltros() {
+  document.getElementById("dropwdown").classList.toggle("dropdown-active")
+
 }
