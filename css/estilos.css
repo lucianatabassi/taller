@@ -878,7 +878,8 @@ right: 100px;
   justify-content: center;
 }
 .img-opinion {
-  width: 1210px;
+  width: 100%;
+  /*width: 1210px;*/
   height: auto;
   margin-top: 20px;
 
@@ -916,14 +917,16 @@ right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 720px;
+  width: 57%;
+  /*width: 720px;*/
   height: auto;
 }
 .img-videos-col2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 445px;
+  width: 35%;
+  /*width: 445px;*/
   height: auto;
 }
 
@@ -1084,11 +1087,16 @@ right: 100px;
   list-style: none;
   padding-left: 0px;
 }
-@media (min-width: 1400px) and (max-width: 1500) {
+@media (min-width: 1400px) and (max-width: 1500px) {
   #SECCION-1 {
-    height: 140vh;
+    height: 100vh;
    }
-
+   .carousel-item {
+    height: 100%;
+  }
+  .degrade {
+    top: 30%;
+  }
    .puntitos {
     position: relative;
     left: 1164px !important;
@@ -1097,9 +1105,14 @@ right: 100px;
 }
   @media (min-width: 1600px) and (max-width: 1920px) {
     #SECCION-1 {
-     height: 125vh !important;
+     height: 100vh !important;
     }
- 
+    .carousel-item {
+      height: 100%;
+    }
+    .degrade {
+      top: 30%;
+    }
     .content-usuario p {
      font-size: 3rem !important;
     }
@@ -1111,8 +1124,8 @@ right: 100px;
     .titulo-principal {
      font-size: 6rem !important;
     }
-    #SECCION-2-LO-MAS-IMPORTANTE {
-      height: 100vh;
+    #SECCION-2-LO-MAS-RELEVANTE {
+      height: 120vh;
     }
    .titulos-seccion2 {
      font-size: 2.2rem !important;
