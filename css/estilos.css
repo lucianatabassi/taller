@@ -10,13 +10,12 @@ html * {
 body {
   margin: 0;
   width: 100%;
-
  
   
 }
 section {
   width: 100%;
-
+  
 }
 
 h1 {
@@ -196,6 +195,7 @@ h1 {
     background-color: #DE1B2F;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    cursor: pointer;
     display: none;
   }
   .chips-extra.chips-extra-active {
@@ -760,6 +760,13 @@ h1 {
 
 
 /* BOTONES DEL CARRUSEL*/
+.puntitos {
+  width: 20px;
+  position: relative;
+  top: 51px;
+  left: 1140px;
+  cursor: pointer;
+}
 .swiper-navBtn{
   color: #616161;
   transition: color 0.3s ease;
@@ -810,7 +817,10 @@ h1 {
 }
 .swiper-pagination .swiper-pagination-clickable .swiper-pagination-bullets .swiper-pagination-horizontal {
 right: 100px;
+
+
 }
+
 .swiper-pagination {
   text-align: unset !important;
   left: 1140px !important;
