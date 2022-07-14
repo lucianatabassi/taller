@@ -51,7 +51,7 @@ function abrirPuntitos() {
 
 function abrirLike() {
   document.getElementById("popup2").classList.toggle("popup-like-active")
-  setTimeout(() => document.getElementById("popup2").style.display="none", 10000);
+  setTimeout(() => document.getElementById("popup2").style.display="none", 4000);
 }
 
 
@@ -59,3 +59,16 @@ function abrirFiltros() {
   document.getElementById("dropwdown").classList.toggle("dropdown-active")
 
 }
+
+function noMG() {
+  document.getElementById("dislike").classList.toggle("overlay-dislike-active")
+}
+
+function filtros() {
+  document.getElementById("chips").classList.toggle("chips-extra-active")
+  document.getElementById("chips2").classList.toggle("chips-extra-active")
+  document.getElementById("chips3").classList.toggle("chips-extra-active")
+  document.getElementById("chips4").classList.toggle("chips-extra-active")
+  console.log ("envio");
+}
+

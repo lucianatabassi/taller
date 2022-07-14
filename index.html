@@ -50,7 +50,7 @@
           <img src="img/degrade abajo.png" class="degrade" alt="">
           <img src="img/linea.png" class="linea" alt="">
           <H1 class="titulo-principal">Susana Giménez regresa a la TV con su <br/> segundo especial, ahora con Sebastián Yatra</H1>
-          <img src="img/foto portada4.png" class="d-block w-100" alt="...">
+          <img src="img/foto portada4.jpg" class="d-block w-100" alt="...">
         </div>
 
       </div>
@@ -86,7 +86,30 @@
             <p>Política</p>
             <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
           </div>
-          <img src="img/mas.png" class="mas" alt="">
+          <div class="chip">
+            <p>Tecnología</p>
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div>       
+            <img src="img/mas.png" class="mas" id="mas"  onclick="filtros()" alt="">
+
+
+            <div class="chips-extra" id="chips">
+              <p>Mundo</p>
+            </div>
+            <div class="chips-extra" id="chips2">
+              <p>Sociedad</p>
+            </div>
+            <div class="chips-extra" id="chips3" >
+              <p>Economía</p>
+            </div>
+            <div class="chips-extra" id="chips4">
+              <p>Deportes</p>
+            </div>
+
+            
+
+          
+
         </div>
         
   
@@ -177,10 +200,6 @@
   
 
   <section id="SECCION-ENVIVO">
-
-      <button class="boton-envivo">
-        <p> <span class="circulo-blanco"></span> <span class="circulo-rojo"></span> EN VIVO</p>
-      </button>
       <div class="envivo">
         <h1 class="titulo-envivo">Marcha piquetera y cortes: amenazan con <br/> “piquetazo” de 4 días si el Gobierno no da respuestas</h1>
         <img src="img/rect contenedor en vivo.jpg" alt="">
@@ -234,7 +253,7 @@
                   <div class="contenido-popup-puntitos">
                     <div class="popup-row1">
                       <img src="img/disLike.png" class="dislike" alt="">
-                      <p class="popup-texto">No me gusta esta noticia</p>
+                      <p class="popup-texto" onclick="noMG()">No me gusta esta noticia</p>
                     </div>
                     
                     <div class="popup-row2">
@@ -250,6 +269,14 @@
                   </div>
                 </div>
                 
+              </div>
+
+              <div class="popup-dislike" id="dislike">
+                <div class="overlay-dislike">
+                  <div class="contenido-dislike">
+                    <img src="img/feedback dislike.png" alt="">
+                  </div>
+                </div>
               </div>
 
                 </div>
@@ -272,10 +299,10 @@
                 
                 </div>
                 <div class="botones-card">
-              <button id="boton-card">
-                <img src="img/Like.png" class="like" alt="">
-                
-              </button>
+                  <button id="boton-card" class="mg2" >
+                    <span id="mg2" class="like"></span>
+
+                </button>
               <button id="boton-card">
                 <img src="img/Share.png" class="share" alt="">
                 
@@ -298,10 +325,10 @@
               <h2 class="titulo-card">Polémica por el proyecto opositor para cerrar la Defensoría del Público Audiovisual que maneja Miriam <br/> Lewin</h2>
 
             <div class="botones-no-autor">
-              <button id="boton-card">
-                <img src="img/Like.png" class="like" alt="">
-                
-              </button>
+              <button id="boton-card" class="mg3" >
+                <span id="mg3" class="like"></span>
+
+            </button>
               <button id="boton-card">
                 <img src="img/Share.png" class="share" alt="">
                 
@@ -599,7 +626,7 @@
       
         <div class="swiper-button-next swiper-navBtn "></div>
         <div class="swiper-button-prev swiper-navBtn"></div>
-       <!-- <div class="swiper-pagination"></div>-->
+       <!-- <div class="swiper-pagination2"></div>-->
     </div>  
   </div>
 
@@ -703,7 +730,7 @@
       <h1 class="titulos-secciones">Opinión</h1>
     </div>
 
-    <div>
+    <div class="img-op">
       <img src="img/Group 32.jpg" class="img-opinion" alt="">
     </div>
 
@@ -1526,7 +1553,23 @@
         $(".mg").toggleClass("mg-activado")
       })
     })
+
+    $(document).ready(function() {
+    $(".mg2").click(function(){
+      $(".mg2").toggleClass("mg-activado2")
+    })
+  })
+
+  $(document).ready(function() {
+    $(".mg3").click(function(){
+      $(".mg3").toggleClass("mg-activado3")
+    })
+  })
   </script>
+
+<script>
+ 
+</script>
   
 </body>
 </html>
